@@ -7,6 +7,7 @@ export const environment = {
   production: false,
   baseUrl: 'localhost:8081/sakila',
   customers: '/customers',
+  appVersion: require('../../package.json').version + '--dev',
 };
 
 /*

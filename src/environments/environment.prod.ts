@@ -3,4 +3,5 @@ export const environment = {
   production: true,
   baseUrl: 'localhost:8081/sakila',
   customers: '/customers',
+  appVersion: require('../../package.json').version + '--prod',
 };

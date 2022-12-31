@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  @HostBinding('attr.app-version') appVersionAttr = environment.appVersion;
+  today: Date = new Date();
+  currentVersion: string = 'Version: ' + environment.appVersion;
   title = 'Sakila';
 
   constructor(private modalService: NgbModal) {}
