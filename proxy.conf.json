@@ -1,0 +1,8 @@
+{
+  "/": {
+    "target": "http://localhost:8081/sakila",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

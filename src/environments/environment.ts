@@ -5,8 +5,11 @@
 export const environment = {
   name: 'LOCAL',
   production: false,
-  baseUrl: 'localhost:8081/sakila',
+  baseUrl: 'http://localhost:8081/sakila',
   customers: '/customers',
+  films: '/films',
+  staff: '/staff',
+  actors: '/actors',
   appVersion: require('../../package.json').version + '--dev',
 };
 
