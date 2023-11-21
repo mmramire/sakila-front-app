@@ -12,6 +12,8 @@ export class ActorsService {
 
   // Endpoints alfabeticamente
 
+  private urlBusquedaFindByActorId =
+    environment.baseUrl + environment.actors + '/findByActorId';
   private urlBusquedaFindByFirstName =
     environment.baseUrl + environment.actors + '/findByFirstName';
   private urlBusquedaFindByLastName =
@@ -20,6 +22,8 @@ export class ActorsService {
     environment.baseUrl + environment.actors + '/downloadPicture';
   private urlBusquedaGetAll =
     environment.baseUrl + environment.actors + '/getAll';
+  private urlBusquedaGetAllActorsByPages =
+    environment.baseUrl + environment.actors + '/getAllActorsByPages';
 
   /**
    * Retorna una lista de actores coincidentes con el nombre indicado
@@ -29,6 +33,17 @@ export class ActorsService {
   getActorByFirstName(name: string): Observable<ActorList> {
     return this.httpClient.get<ActorList>(
       this.urlBusquedaFindByFirstName + '/' + name
+    );
+  }
+
+  /**
+   * Retorna una lista de actores coincidentes con el nombre indicado
+   * @argument name
+   * @returns ActorList
+   */
+  getActorByLastName(lastName: string): Observable<ActorList> {
+    return this.httpClient.get<ActorList>(
+      this.urlBusquedaFindByLastName + '/' + lastName
     );
   }
 

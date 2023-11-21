@@ -1,0 +1,42 @@
+<div *ngIf="listadoActores.length > 0">
+  <ul *ngFor="let item of listadoActores">
+    <li>{{ item.firstName }}</li>
+  </ul>
+
+  <div class="d-flex justify-content-center mt-3">
+    <ngb-pagination></ngb-pagination>
+    class="d-flex justify-content-center" [collectionSize]="70" [(page)]="page"
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"># Actor Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Last Update</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listadoActores; index as i">
+        <th scope="row">{{ item.actorId }}</th>
+        <td>{{ item.actorId }}</td>
+        <td>
+          {{ item.firstName }}
+        </td>
+        <td>{{ item.lastName }}</td>
+        <td>{{ item.lastUpdate }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="openPicture(item.actorId)"
+          >
+            OpenPicture
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

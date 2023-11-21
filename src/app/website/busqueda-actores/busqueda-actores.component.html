@@ -1,1 +1,14 @@
-<p>busqueda-actores works!</p>
+<div class="container">
+  <div class="row">
+    <button
+      type="button"
+      class="btn btn-primary col-2 justify-content-center"
+      (click)="buscarTodosLosActores()"
+    >
+      Buscar Todos
+    </button>
+  </div>
+  <app-resultado-actores
+    [listadoActores]="resultadoBusqueda"
+  ></app-resultado-actores>
+</div>
