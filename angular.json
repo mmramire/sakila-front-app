@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sakila:build:production"
+              "buildTarget": "sakila:build:production"
             },
             "development": {
-              "browserTarget": "sakila:build:development"
+              "buildTarget": "sakila:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sakila:build"
+            "buildTarget": "sakila:build"
           }
         },
         "test": {
